@@ -1,33 +1,19 @@
-# Content-Based-Movie-Recommender-System-with-sentiment-analysis-using-AJAX
+# Movie Recommendation System
 
 ![Python](https://img.shields.io/badge/Python-3.8-blueviolet)
 ![Framework](https://img.shields.io/badge/Framework-Flask-red)
 ![Frontend](https://img.shields.io/badge/Frontend-HTML/CSS/JS-green)
 ![API](https://img.shields.io/badge/API-TMDB-fcba03)
 
-**Updated version of this application can be found at:** https://github.com/kishan0725/The-Movie-Cinema
+A content-based recommender system that recommends movies similar to the movie the user likes and analyses the sentiments of the reviews given by the user.
 
-Content Based Recommender System recommends movies similar to the movie user likes and analyses the sentiments on the reviews given by the user for that movie.
-
-The details of the movies(title, genre, runtime, rating, poster, etc) are fetched using an API by TMDB, https://www.themoviedb.org/documentation/api, and using the IMDB id of the movie in the API, I did web scraping to get the reviews given by the user in the IMDB site using `beautifulsoup4` and performed sentiment analysis on those reviews.
-
-Check out the live demo: https://mrswsa.herokuapp.com/
+Check out the live demo: https://tmc.kishanlal.dev
 
 Link to youtube demo: https://www.youtube.com/watch?v=dhVePtyECFw
 
-# Note
+## Overview
 
-> #### Use this URL - https://the-movie-buff.herokuapp.com/ - in case if you see application error in the above mentioned URL
-
-## The Movie Cinema
-
-I've developed a similar application called "The Movie Cinema" which supports all language movies. But the only thing that differs from this application is that I've used the TMDB's recommendation engine in "The Movie Cinema". The recommendation part developed by me in this application doesn't support for multi-language movies as it consumes 200% of RAM (even after deploying it to Heroku) for generating Count Vectorizer matrix for all the 700,000+ movies in the TMDB. 
-
-Link to "The Movie Cinema" application: https://the-movie-cinema.herokuapp.com/
-
-Don't worry if the movie that you are looking for is not auto-suggested. Just type the movie name and click on "enter". You will be good to go eventhough if you made some typo errors.
-
-Source Code: https://github.com/kishan0725/The-Movie-Cinema
+The movies are recommended based on the content of the movie you entered or selected. The main parameters that are considered for the recommendations are the genre, director, and top 3 casts. The details of the movies, such as title, genre, runtime, rating, poster, casts, etc., are fetched from [TMDB](https://www.themoviedb.org/documentation/api). The reviews of each individual movie given by the users are "web-scraped" from the IMDB website with the help of `beautifulsoup4`, and the reviews are subjected to sentiment analysis, where the model predicts whether the review is positive or negative.
 
 ## Featured in Krish's Live Session on YouTube
 
@@ -35,7 +21,7 @@ Source Code: https://github.com/kishan0725/The-Movie-Cinema
 
 ## How to get the API key?
 
-Create an account in https://www.themoviedb.org/, click on the `API` link from the left hand sidebar in your account settings and fill all the details to apply for API key. If you are asked for the website URL, just give "NA" if you don't have one. You will see the API key in your `API` sidebar once your request is approved.
+Create an account in https://www.themoviedb.org/. Once you successfully created an account, click on the `API` link from the left hand sidebar in your account settings and fill all the details to apply for an API key. If you are asked for the website URL, just give "NA" if you don't have one. You will see the API key in your `API` sidebar once your request has been approved.
 
 ## How to run the project?
 
@@ -53,7 +39,7 @@ Create an account in https://www.themoviedb.org/, click on the `API` link from t
 
 ## Similarity Score : 
 
-   How does it decide which item is most similar to the item user likes? Here come the similarity scores.
+   **How does it decide which item is most similar to the item user likes(or selects in our case)?** Here comes the similarity scores.
    
    It is a numerical value ranges between zero to one which helps to determine how much two items are similar to each other on a scale of zero to one. This similarity score is obtained measuring the similarity between the text details of both of the items. So, similarity score is the measure of similarity between given text details of two items. This can be done by cosine-similarity.
    
