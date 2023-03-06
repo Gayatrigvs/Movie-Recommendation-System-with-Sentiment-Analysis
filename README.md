@@ -9,7 +9,7 @@ The movies are recommended based on the content of the movie you entered or sele
 
 ## Results
 
-[![krish youtube](https://github.com/kishan0725/AJAX-Movie-Recommendation-System-with-Sentiment-Analysis/blob/master/static/krish-naik.PNG)](https://www.youtube.com/watch?v=A_78fGgQMjM)
+![image](https://user-images.githubusercontent.com/85870494/223186181-6327e616-24df-4172-82ec-8a9bb14efbec.png)
 
 ## How to get the API key?
 
